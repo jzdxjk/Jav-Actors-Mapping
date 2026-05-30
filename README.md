@@ -8,7 +8,7 @@
   </a>
 </p>
 
-# Jav Actors Mapping For AVdb
+# Jav Actors Mapping x AVdb
 
 ## 项目说明
 
