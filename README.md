@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://peifeng.li"><img width="184px" alt="logo" src="public/logo.svg" />
+  <a href="https://peifeng.li"><img width="184px" alt="logo" src="https://raw.githubusercontent.com/li-peifeng/AVdb-Only/refs/heads/main/public/logo.svg" />
   </a>
 </p>
 <p align="center">
