@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actor>
-  <a zh_cn="铃木希" zh_tw="鈴木希" jp="すずきのぞみ" keyword="Suzuki Nozomi,すずきのぞみ,铃木希,鈴木希" tmdb_id="6254116" />
-  <a zh_cn="奥井千晴" zh_tw="奥井千晴" jp="おくい ちはる" keyword="おくい ちはる,奥井千晴" tmdb_id="6254182" />
-  <a zh_cn="桃尻浦良" zh_tw="桃尻麗" jp="桃尻うらら" keyword="桃尻浦良,桃尻麗,urara momojiri,桃尻うらら" tmdb_id="6254186" />
   <a zh_cn="阿比盖尔·迈克" zh_tw="阿比盖尔·迈克" jp="阿比盖尔·迈克" keyword="Abigail Mac,Abigail Mack,Abigail,Abigaile Mac,阿比盖尔·迈克" tmdb_id="1197017" />
   <a zh_cn="阿部乃美久" zh_tw="阿部乃美久" jp="阿部乃みく" keyword="阿部乃美久,阿部乃みく,阿倍乃みく,Misa Abe,Nanami Kashiwagi,Rika,Misa Yoshie,Riisa Hama,Saori,阿部美沙,柏木ななみ,りか,浜里衣紗,さおり,佳江美沙" tmdb_id="2132746" />
   <a zh_cn="阿川美津子" zh_tw="阿川美津子" jp="阿川美津子" keyword="阿川美津子" />
@@ -235,6 +232,7 @@
   <a zh_cn="奥村瞳" zh_tw="奥村瞳" jp="奥村瞳" keyword="奥村瞳" />
   <a zh_cn="奥村かや" zh_tw="奥村かや" jp="奥村かや" keyword="奥村かや" />
   <a zh_cn="奥见真央" zh_tw="奧見真央" jp="奥見真央" keyword="奥见真央,奧見真央,奥見真央" />
+  <a zh_cn="奥井千晴" zh_tw="奥井千晴" jp="おくい ちはる" keyword="おくい ちはる,奥井千晴" tmdb_id="6254182" />
   <a zh_cn="奥美遥" zh_tw="奥美遥" jp="奥美遥" keyword="奥美遥" />
   <a zh_cn="奥山琴美" zh_tw="奥山琴美" jp="奥山琴美" keyword="奥山琴美" />
   <a zh_cn="奥山夕子" zh_tw="奥山夕子" jp="奥山夕子" keyword="奥山夕子" />
@@ -4227,6 +4225,7 @@
   <a zh_cn="铃木麻奈美" zh_tw="鈴木麻奈美" jp="鈴木麻奈美" keyword="铃木麻奈美,鈴木麻奈美" />
   <a zh_cn="铃木美帆" zh_tw="鈴木美帆" jp="鈴木美帆" keyword="铃木美帆,鈴木美帆" />
   <a zh_cn="铃木千里" zh_tw="鈴木千里" jp="鈴木千里" keyword="鈴木千里,铃木千里" />
+  <a zh_cn="铃木希" zh_tw="鈴木希" jp="すずきのぞみ" keyword="Suzuki Nozomi,すずきのぞみ,铃木希,鈴木希" tmdb_id="6254116" />
   <a zh_cn="铃木心冬" zh_tw="鈴木心冬" jp="鈴木心冬" keyword="铃木心冬,鈴木心冬" />
   <a zh_cn="铃木心湖" zh_tw="鈴木心湖" jp="鈴木心湖" keyword="铃木心湖,鈴木心湖" />
   <a zh_cn="铃木心叶" zh_tw="鈴木心葉" jp="鈴木心葉" keyword="铃木心叶,鈴木心葉" />
@@ -7294,6 +7293,7 @@
   <a zh_cn="桃井りか" zh_tw="桃井りか" jp="桃井りか" keyword="桃井りか,Momo Momomiya,桃宮もも,Rika Momoi,小倉もも,Momo Ogura,Momomiya Momo" tmdb_id="1988487" />
   <a zh_cn="桃井りの" zh_tw="桃井りの" jp="桃井りの" keyword="桃井りの" />
   <a zh_cn="桃井れお" zh_tw="桃井れお" jp="桃井れお" keyword="桃井れお,霧島かほ,南野希,大島香菜,高城優梨愛,Kirishima Kaho,Reo Momoi" tmdb_id="3242935" />
+  <a zh_cn="桃尻浦良" zh_tw="桃尻麗" jp="桃尻うらら" keyword="桃尻浦良,桃尻麗,urara momojiri,桃尻うらら" tmdb_id="6254186" />
   <a zh_cn="桃尻かなめ" zh_tw="桃尻かなめ" jp="桃尻かなめ" keyword="桃尻かなめ,Kaname Momojiri,Momojiri Kaname" tmdb_id="2692353" />
   <a zh_cn="桃尻かのん" zh_tw="桃尻かのん" jp="桃尻かのん" keyword="桃尻かのん,叶もも,大橋桃菜,加納恵理子,百田花音,青木みなみ,桃尻 かのん,Kanon Momokou" tmdb_id="3142721" />
   <a zh_cn="桃瀬雏乃" zh_tw="桃瀬雛乃" jp="桃瀬雛乃" keyword="桃瀬雏乃,桃瀬雛乃" />
