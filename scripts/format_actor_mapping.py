@@ -127,6 +127,11 @@ def script_bucket_for_text(value: str) -> int:
     if not stripped:
         return 3
 
+    # Names containing kana are Japanese names even when they start with kanji.
+    # Keep them after Chinese pinyin and ASCII-name sections.
+    if any(is_japanese_kana(char) for char in stripped):
+        return 2
+
     # Ignore leading punctuation/symbols so entries like "【あいちゃん" follow Japanese order.
     for char in stripped:
         if char.isspace() or not char.isalnum():
