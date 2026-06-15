@@ -269,6 +269,51 @@ def merge_person_ids(root: ET.Element, person_ids: List[Dict[str, str]]) -> List
     return changes
 
 
+def entry_display_name(attributes: Dict[str, str]) -> str:
+    for field in ("zh_cn", "zh_tw", "jp", "keyword"):
+        value = attributes.get(field, "").strip()
+        if value:
+            return value
+    return "<unnamed>"
+
+
+def find_duplicate_tmdb_ids(root: ET.Element) -> List[Tuple[str, List[str]]]:
+    entries_by_tmdb_id: Dict[str, List[str]] = {}
+
+    for child in list(root):
+        if child.tag != "a":
+            continue
+        attrs = dict(child.attrib)
+        tmdb_id = normalize_attribute_value(attrs.get("tmdb_id", ""))
+        if not tmdb_id:
+            continue
+        entries_by_tmdb_id.setdefault(tmdb_id, []).append(entry_display_name(attrs))
+
+    return [
+        (tmdb_id, names)
+        for tmdb_id, names in entries_by_tmdb_id.items()
+        if len(names) > 1
+    ]
+
+
+def validate_unique_tmdb_ids(root: ET.Element) -> None:
+    duplicates = find_duplicate_tmdb_ids(root)
+    if not duplicates:
+        return
+
+    preview_lines: List[str] = []
+    max_preview = 20
+    for tmdb_id, names in duplicates[:max_preview]:
+        preview_lines.append(f"  tmdb_id={tmdb_id}: {', '.join(names)}")
+
+    remaining = len(duplicates) - max_preview
+    if remaining > 0:
+        preview_lines.append(f"  ... and {remaining} more")
+
+    details = "\n".join(preview_lines)
+    raise ValueError(f"Duplicate tmdb_id values found; tmdb_id must be unique:\n{details}")
+
+
 def sort_key_for_entry(attributes: Dict[str, str], rendered_line: str) -> SortKey:
     return (
         (script_bucket_for_text(attributes.get("zh_cn", "")), natural_key(attributes.get("zh_cn", ""))),
@@ -291,6 +336,8 @@ def build_normalized_xml(raw_xml: str, person_ids: List[Dict[str, str]] | None =
 
     if person_ids is not None:
         merge_person_ids(root, person_ids)
+
+    validate_unique_tmdb_ids(root)
 
     rendered_entries: List[Tuple[SortKey, str]] = []
 
