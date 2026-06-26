@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize actor-mapping.xml by sorting entries, blacklist, and escaped strings. AVdb 1.0.0"""
+"""Normalize actor-mapping.xml by sorting entries, blacklist, and escaped strings. AVdb 1.0.1"""
 
 from __future__ import annotations
 import argparse
@@ -15,7 +15,14 @@ from xml.sax.saxutils import escape as xml_escape
 from pypinyin import Style, lazy_pinyin
 
 XML_DECLARATION = '<?xml version="1.0" encoding="UTF-8"?>'
-PREFERRED_ATTR_ORDER: Sequence[str] = ("zh_cn", "zh_tw", "jp", "keyword", "tmdb_id")
+PREFERRED_ATTR_ORDER: Sequence[str] = (
+    "zh_cn",
+    "zh_tw",
+    "jp",
+    "keyword",
+    "tmdb_id",
+    "bio_graphy",
+)
 SUSPICIOUS_ESCAPE_RE = re.compile(
     r"(\\u[0-9a-fA-F]{4}|\\x[0-9a-fA-F]{2}|\\[nrtfv]|&amp;(?:amp|lt|gt|quot|apos);|&#x[0-9a-fA-F]+;|&#\d+;)"
 )
