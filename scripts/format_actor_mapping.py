@@ -21,6 +21,7 @@ PREFERRED_ATTR_ORDER: Sequence[str] = (
     "jp",
     "keyword",
     "tmdb_id",
+    "dackdrop",
     "bio_graphy",
 )
 SUSPICIOUS_ESCAPE_RE = re.compile(
