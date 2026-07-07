@@ -1,0 +1,29 @@
+name: Auto Approve jzdxjk PRs
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+permissions:
+  pull-requests: write
+
+jobs:
+  approve:
+    if: github.event.pull_request.user.login == 'jzdxjk' && github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve pull request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              event: 'APPROVE',
+              body: 'Automatically approved trusted contributor jzdxjk.'
+            })
