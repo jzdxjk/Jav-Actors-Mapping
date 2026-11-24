@@ -8,6 +8,7 @@ on:
       - scripts/**
       - tests/**
       - .github/workflows/actor-mapping-format.yml
+      - .github/workflows/Auto-Approve-and-merge-jzdxjk.yml
   pull_request:
     paths:
       - actor-mapping.xml
@@ -15,6 +16,7 @@ on:
       - scripts/**
       - tests/**
       - .github/workflows/actor-mapping-format.yml
+      - .github/workflows/Auto-Approve-and-merge-jzdxjk.yml
 
 permissions:
   contents: write
@@ -39,6 +41,9 @@ jobs:
 
       - name: Test mapping identities and merge coverage
         run: python -m unittest discover -s tests -v
+
+      - name: Test approval workflow repository selection
+        run: node --test tests/auto-approve.test.cjs
 
       - name: Check source format and generate simplified mapping
         # Contributors only maintain the source; push commits the generated file.
@@ -67,6 +72,9 @@ jobs:
 
       - name: Test mapping identities and merge coverage
         run: python -m unittest discover -s tests -v
+
+      - name: Test approval workflow repository selection
+        run: node --test tests/auto-approve.test.cjs
 
       - name: Format source and synchronize simplified mapping
         run: python scripts/format_actor_mapping.py --write --check actor-mapping.xml

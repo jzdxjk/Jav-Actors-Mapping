@@ -35,7 +35,9 @@ jobs:
                 return context.payload.pull_request
               }
 
-              const pullRequests = context.payload.workflow_run.pull_requests
+              const pullRequests = context.payload.workflow_run.pull_requests.filter(
+                (pullRequest) => pullRequest.base.repo.id === context.payload.repository.id
+              )
               if (pullRequests.length) {
                 const { data: pullRequest } = await github.rest.pulls.get({
                   owner: context.repo.owner,
