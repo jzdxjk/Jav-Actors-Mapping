@@ -73,3 +73,45 @@ test('runs without PR references still search the current repository', async () 
 test('pull_request_target uses the PR supplied by its own repository', async () => {
   assert.deepEqual(await lookup([foreignPr], 'pull_request_target'), [])
 })
+
+async function mergeWithWorkflowSha(workflowSha) {
+  const calls = []
+  const pullRequest = {
+    number: 61, state: 'open', draft: false, user: { login: 'jzdxjk' },
+    head: { sha: 'latest-head' }, base: { ref: 'main' },
+  }
+  await runScript({
+    eventName: 'workflow_run',
+    repo: { owner: 'jzdxjk', repo: 'Jav-Actors-Mapping' },
+    payload: {
+      repository: { id: 100 },
+      workflow_run: { pull_requests: [localPr], head_sha: workflowSha },
+    },
+  }, {
+    async paginate() {
+      calls.push('files')
+      return [{ filename: 'actor-mapping.xml' }]
+    },
+    rest: {
+      pulls: {
+        async get() { return { data: pullRequest } },
+        async createReview() { calls.push('approve') },
+        async merge(args) {
+          calls.push(['merge', args.sha])
+          return { data: { merged: true } }
+        },
+      },
+    },
+  }, { info() {}, setOutput() {} })
+  return calls
+}
+
+test('an older successful workflow cannot approve or merge a newer PR head', async () => {
+  assert.deepEqual(await mergeWithWorkflowSha('older-head'), [])
+})
+
+test('a successful workflow for the current PR head merges the checked commit', async () => {
+  assert.deepEqual(await mergeWithWorkflowSha('latest-head'), [
+    'files', 'approve', ['merge', 'latest-head'],
+  ])
+})
