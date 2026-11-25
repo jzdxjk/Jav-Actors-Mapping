@@ -5,6 +5,8 @@ on:
     paths:
       - actor-mapping.xml
       - mapping_actor.xml
+      - actor_mapping.json
+      - xml_to_json.py
       - scripts/**
       - tests/**
       - .github/workflows/actor-mapping-format.yml
@@ -13,6 +15,8 @@ on:
     paths:
       - actor-mapping.xml
       - mapping_actor.xml
+      - actor_mapping.json
+      - xml_to_json.py
       - scripts/**
       - tests/**
       - .github/workflows/actor-mapping-format.yml
@@ -42,14 +46,11 @@ jobs:
       - name: Test mapping identities and merge coverage
         run: python -m unittest discover -s tests -v
 
+      - name: Check full mapping format
+        run: python scripts/format_full_mapping.py --check actor-mapping.xml
+
       - name: Test approval workflow repository selection
         run: node --test tests/auto-approve.test.cjs
-
-      - name: Check source format and generate simplified mapping
-        # Contributors only maintain the source; push commits the generated file.
-        run: |
-          python scripts/format_actor_mapping.py --write --check actor-mapping.xml
-          git diff --exit-code -- actor-mapping.xml
 
   auto-format-on-push:
     if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
@@ -73,14 +74,20 @@ jobs:
       - name: Test mapping identities and merge coverage
         run: python -m unittest discover -s tests -v
 
+      - name: Format full mapping
+        run: python scripts/format_full_mapping.py --write --check actor-mapping.xml
+
       - name: Test approval workflow repository selection
         run: node --test tests/auto-approve.test.cjs
 
-      - name: Format source and synchronize simplified mapping
-        run: python scripts/format_actor_mapping.py --write --check actor-mapping.xml
+      - name: Generate compatibility mappings on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/generate_compatibility_mapping.py actor-mapping.xml mapping_actor.xml
+          python xml_to_json.py actor-mapping.xml actor_mapping.json
 
-      - name: Auto commit if either mapping changed
+      - name: Auto commit formatting and compatibility mappings
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore: format actor mapping and sync simplified mapping'
-          file_pattern: actor-mapping.xml mapping_actor.xml
+          commit_message: 'chore: format actor mapping and update compatibility mappings'
+          file_pattern: actor-mapping.xml mapping_actor.xml actor_mapping.json

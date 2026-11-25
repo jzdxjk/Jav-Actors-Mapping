@@ -6307,8 +6307,8 @@
       "白间兔花",
       "白間兔花",
       "白間兎花",
-      "[&quot;Shiroma Uka&quot;",
-      "&quot;白间兔花&quot;]",
+      "[\"Shiroma Uka\"",
+      "\"白间兔花\"]",
       "しろまうか",
       "Shiroma Uka"
     ]
@@ -17386,7 +17386,7 @@
     "a": [
       "柴田愛",
       "柴田三兄妹",
-      "Shibata Brother &amp; Sisters",
+      "Shibata Brother & Sisters",
       "shibata3"
     ]
   },
@@ -18799,6 +18799,24 @@
     ]
   },
   {
+    "c": "朝阳美琴",
+    "t": "朝陽美琴",
+    "j": "朝陽美琴",
+    "a": [
+      "朝阳美琴",
+      "朝陽美琴",
+      "Shou Nishino",
+      "Sho Nishino",
+      "しょう",
+      "にしの しょう",
+      "Shô Nishino",
+      "Nishino Shou",
+      "Show Nishino",
+      "横山扶佐子",
+      "有美子"
+    ]
+  },
+  {
     "c": "朝野光",
     "t": "朝野光",
     "j": "朝野光",
@@ -18822,7 +18840,7 @@
     "j": "朝羽穂乃",
     "a": [
       "朝羽穂乃",
-      "[&quot;Asaha Hono&quot;]",
+      "[\"Asaha Hono\"]",
       "あさはほの",
       "Asaha Hono"
     ]
@@ -38640,8 +38658,8 @@
       "飯成直緒",
       "いいなりなお",
       "言成ナオ",
-      "[&quot;Iinari Nao&quot;",
-      "&quot;饭洼奈央&quot;]",
+      "[\"Iinari Nao\"",
+      "\"饭洼奈央\"]",
       "Iinari Nao",
       "饭洼奈央"
     ]
@@ -63488,7 +63506,7 @@
     "j": "吉村海空",
     "a": [
       "吉村海空",
-      "Misora ​​Yoshimura",
+      "Misora Yoshimura",
       "Sorami",
       "そらみ",
       "よしむら みそら"
@@ -64682,10 +64700,9 @@
   {
     "c": "吉田真由美",
     "t": "吉田真由美",
-    "j": "​吉田真由美",
+    "j": "吉田真由美",
     "a": [
       "吉田真由美",
-      "​吉田真由美",
       "Mayumi Yoshida"
     ]
   },
@@ -86566,7 +86583,7 @@
       "一条リオン",
       "一條莉音",
       "Ichijou Rion",
-      "YURINA​",
+      "YURINA",
       "琴音りあ"
     ]
   },
@@ -104342,7 +104359,7 @@
       "Nakayama Hikaru",
       "Nakayama Sister Princess",
       "Rita (Japanese singer)",
-      "Rita [Blueberry&amp;Yogurt]",
+      "Rita [Blueberry&Yogurt]",
       "Sonoda Mahiru",
       "Takahara Kukuru",
       "Umino Kanata",
@@ -114750,7 +114767,7 @@
       "秋濑莉莉",
       "秋瀨莉莉",
       "秋瀬りり",
-      "[&quot;Akise Riri&quot;]",
+      "[\"Akise Riri\"]",
       "あきせりり",
       "Akise Riri"
     ]
@@ -166167,24 +166184,6 @@
     ]
   },
   {
-    "c": "西野翔‌",
-    "t": "西野翔‌",
-    "j": "朝陽美琴",
-    "a": [
-      "西野翔‌",
-      "朝陽美琴",
-      "Shou Nishino",
-      "Sho Nishino",
-      "しょう",
-      "にしの しょう",
-      "Shô Nishino",
-      "Nishino Shou",
-      "Show Nishino",
-      "横山扶佐子",
-      "有美子"
-    ]
-  },
-  {
     "c": "西野小春",
     "t": "西野小春",
     "j": "西野小春",
@@ -180959,8 +180958,8 @@
       "新垣爱琉",
       "新垣愛琉",
       "新垣める",
-      "[&quot;Aragaki Meru&quot;",
-      "&quot;新垣梅露&quot;]",
+      "[\"Aragaki Meru\"",
+      "\"新垣梅露\"]",
       "あらがきめる",
       "Aragaki Meru",
       "新垣梅露"
@@ -191287,8 +191286,8 @@
     "a": [
       "伊奈美泉奈",
       "伊奈美いずな",
-      "[&quot;Inami Izuna&quot;",
-      "&quot;伊奈美泉奈&quot;]",
+      "[\"Inami Izuna\"",
+      "\"伊奈美泉奈\"]",
       "いなみいずな",
       "Inami Izuna"
     ]
@@ -191707,7 +191706,7 @@
     "a": [
       "伊藤美纪",
       "伊藤美紀",
-      "平野 美紀",
+      "平野 美紀",
       "Miki Hirano",
       "Miki Ito",
       "Miki Itoh",
@@ -208054,6 +208053,24 @@
       "一条まや",
       "一条あずさ",
       "一条麗奈"
+    ]
+  },
+  {
+    "c": "斋藤亚美里",
+    "t": "斋藤亚美里",
+    "j": "斎藤あみり",
+    "a": [
+      "斋藤亚美里",
+      "斎藤あみり",
+      "Saito Amiri",
+      "Amiri Saitō",
+      "Amiri Saitoh",
+      "さいとうあみり",
+      "齋藤亞美里",
+      "斉藤あめり",
+      "斉藤あみり",
+      "Amiri Saito",
+      "Amiri Saitou"
     ]
   },
   {
@@ -224530,6 +224547,15 @@
     ]
   },
   {
+    "c": "佐田茉莉子",
+    "t": "佐田茉莉子",
+    "j": "佐田茉莉子",
+    "a": [
+      "佐田茉莉子",
+      "さたまりこ"
+    ]
+  },
+  {
     "c": "佐田詩織",
     "t": "佐田詩織",
     "j": "佐田詩織",
@@ -226110,34 +226136,6 @@
     "j": "林玉卿",
     "a": [
       "林玉卿"
-    ]
-  },
-  {
-    "c": "‌斋藤亚美里",
-    "t": "‌斋藤亚美里",
-    "j": "斎藤あみり",
-    "a": [
-      "‌斋藤亚美里",
-      "斎藤あみり",
-      "Saito Amiri",
-      "Amiri Saitō",
-      "Amiri Saitoh",
-      "さいとうあみり",
-      "齋藤亞美里",
-      "斉藤あめり",
-      "斉藤あみり",
-      "Amiri Saito",
-      "Amiri Saitou"
-    ]
-  },
-  {
-    "c": "‌佐田茉莉子‌",
-    "t": "‌佐田茉莉子‌",
-    "j": "佐田茉莉子",
-    "a": [
-      "‌佐田茉莉子‌",
-      "佐田茉莉子",
-      "さたまりこ"
     ]
   },
   {
@@ -241356,7 +241354,7 @@
     "j": "ことり",
     "a": [
       "ことり",
-      "&quot;Kotori&quot;",
+      "\"Kotori\"",
       "Kottori"
     ]
   },
